@@ -9,9 +9,9 @@ FILTERING = "Paris"
 
 def get_weather() -> None:
     load_dotenv()
-    api_key = os.getenv("API_KEY")
+    api_key = os.getenv("WEATHER_API_KEY")
     if not api_key:
-        print("Error: API_KEY environment variable is not set")
+        print("Error: WEATHER_API_KEY environment variable is not set")
         return
 
     payload = {"key": api_key, "q": FILTERING, "aqi": "no"}
